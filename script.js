@@ -1,3 +1,4 @@
+// Retrieve the data from the data.json file and generate the card elements
 fetch('./data.json')
   .then(response => response.json())
   .then(data => {
@@ -14,42 +15,39 @@ fetch('./data.json')
     });
   });
 
+// Get the search input field
 const searchInput = document.getElementById('search');
 
+let timeout;
+
 function searchCards() {
+  // Clear the timeout if it exists
+  if (timeout) {
+    clearTimeout(timeout);
+  }
+
+  // Set a new timeout to debounce the search request
+  timeout = setTimeout(() => {
     // Get the search query and convert it to lowercase
     const searchQuery = searchInput.value.toLowerCase();
-  
+
     // Select all the card elements
     const cards = document.querySelectorAll('.card');
-  
+
     // Iterate through the card elements
     cards.forEach(card => {
-      // Get the card's tags, name, and description
+      // Get the card's tags
       const cardTags = card.querySelectorAll('.tag');
-      const cardName = card.querySelector('h2').innerHTML.toLowerCase();
-      const cardDescription = card.querySelector('p').innerHTML.toLowerCase();
+
+      // Check if the card has a name and a description element
+      const cardNameElement = card.querySelector('h2');
+      const cardDescriptionElement = card.querySelector('p');
       let match = false;
-  
-      // Check if any of the card's tags or the card's name or description contain the search query
-      cardTags.forEach(tag => {
-        if (tag.innerHTML.toLowerCase().includes(searchQuery)) {
-          match = true;
-        }
-      });
-      if (cardName.includes(searchQuery) || cardDescription.includes(searchQuery)) {
-        match = true;
-      }
-  
-      // If the card matches the search query, display it; otherwise, hide it
-      if (match) {
-        card.style.display = 'block';
-      } else {
-        card.style.display = 'none';
-      }
-    });
-  }
-  
-  // Set up an event listener on the search input field that calls the searchCards() function when the input is changed
-  searchInput.addEventListener('input', searchCards);
-  
+
+      // If the card has a name and a description element, get their contents
+      if (cardNameElement && cardDescriptionElement) {
+        const cardName = cardNameElement.innerHTML.toLowerCase();
+        const cardDescription = cardDescriptionElement.innerHTML.toLowerCase();
+
+        // Check if any of the card's tags or the card's name or description contain the search query
+        cardTags.forEach(tag)
