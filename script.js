@@ -1,53 +1,49 @@
-// Retrieve the data from the data.json file and generate the card elements
-fetch('./data.json')
+// Fetch data from the data.json file
+fetch('data.json')
   .then(response => response.json())
   .then(data => {
-    data.forEach(card => {
-      const cardElement = document.createElement('div');
-      cardElement.innerHTML = `
-        <h2>${card.name}</h2>
-        <p>${card.description}</p>
-        <div class="tags">
-          ${card.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-        </div>
-      `;
-      document.body.appendChild(cardElement);
+    // Get the search input and results container elements
+    const searchInput = document.getElementById('search-input');
+    const resultsContainer = document.getElementById('results');
+
+    // Add an event listener to the search input to trigger the search when the user submits the form
+    searchInput.addEventListener('keyup', event => {
+      // Get the search query from the input field
+      const query = event.target.value.toLowerCase();
+
+      // Filter the data object to find any cards that match the query
+      const matchingCards = data.filter(card => {
+        // Check if the name of the card, description, or any of the tags match the query
+        return (
+          card.name.toLowerCase().includes(query) ||
+          card.description.toLowerCase().includes(query) ||
+          card.tags.some(tag => tag.toLowerCase().includes(query))
+        );
+      });
+
+      // Clear the results container
+      resultsContainer.innerHTML = '';
+
+      // If there are no matching cards, display a message
+      if (matchingCards.length === 0) {
+        resultsContainer.innerHTML = '<p>No matching cards found</p>';
+      } else {
+        // Otherwise, display the matching cards
+        for (const card of matchingCards) {
+          // Create the HTML for the card
+          const cardHTML = `
+            <div class="card">
+              <h2>${card.name}</h2>
+              <p>${card.description}</p>
+              <div class="tags">
+                ${card.tags.map(tag => `<span>${tag}</span>`).join('')}
+              </div>
+            </div>
+          `;
+
+          // Append the card HTML to the results container
+          resultsContainer.innerHTML += cardHTML;
+        }
+      }
     });
   });
-
-// Get the search input field
-const searchInput = document.getElementById('search');
-
-let timeout;
-
-function searchCards() {
-  // Clear the timeout if it exists
-  if (timeout) {
-    clearTimeout(timeout);
-  }
-
-  // Set a new timeout to debounce the search request
-  timeout = setTimeout(() => {
-    // Get the search query and convert it to lowercase
-    const searchQuery = searchInput.value.toLowerCase();
-
-    // Select all the card elements
-    const cards = document.querySelectorAll('.card');
-
-    // Iterate through the card elements
-    cards.forEach(card => {
-      // Get the card's tags
-      const cardTags = card.querySelectorAll('.tag');
-
-      // Check if the card has a name and a description element
-      const cardNameElement = card.querySelector('h2');
-      const cardDescriptionElement = card.querySelector('p');
-      let match = false;
-
-      // If the card has a name and a description element, get their contents
-      if (cardNameElement && cardDescriptionElement) {
-        const cardName = cardNameElement.innerHTML.toLowerCase();
-        const cardDescription = cardDescriptionElement.innerHTML.toLowerCase();
-
-        // Check if any of the card's tags or the card's name or description contain the search query
-        cardTags.forEach(tag)
