@@ -1,12 +1,13 @@
 // Fetch data from the data.json file
-fetch('data.json')
+fetch('./data.json')
   .then(response => response.json())
   .then(data => {
     // Get the search input and results container elements
     const searchInput = document.getElementById('search-input');
     const resultsContainer = document.getElementById('results');
 
-    
+    // Display all cards from the data object
+    displayCards(data);
 
     // Add an event listener to the search input to trigger the search when the user submits the form
     searchInput.addEventListener('keyup', event => {
@@ -15,12 +16,6 @@ fetch('data.json')
 
       // Filter the data object to find any cards that match the query
       const matchingCards = data.filter(card => {
-        // if the query is null, return all cards
-        if (query === '' || query === null) {
-          return true;
-        }
-
-
         // Check if the name of the card, description, or any of the tags match the query
         return (
           card.name.toLowerCase().includes(query) ||
@@ -29,30 +24,37 @@ fetch('data.json')
         );
       });
 
-      // Clear the results container
-      resultsContainer.innerHTML = '';
-
-      // If there are no matching cards, display a message
-      if (matchingCards.length === 0) {
-        resultsContainer.innerHTML = '<p>No matching cards found</p>';
-      } else {
-        // Otherwise, display the matching cards
-        for (const card of matchingCards) {
-          // Create the HTML for the card
-          const cardHTML = `
-            <div class="card">
-              <h2>${card.name}</h2>
-              <p>${card.description}</p>
-              <div class="tags">
-                ${card.tags.map(tag => `<span>${tag}</span>`).join('')}
-              </div>
-              <a href="${card.url}">View</a>
-            </div>
-          `;
-
-          // Append the card HTML to the results container
-          resultsContainer.innerHTML += cardHTML;
-        }
-      }
+      // Display the matching cards
+      displayCards(matchingCards);
     });
   });
+
+// Function to display the cards in the results container
+function displayCards(cards) {
+  // Clear the results container
+  document.getElementById('results').innerHTML = '';
+
+  // If there are no cards, display a message
+  if (cards.length === 0) {
+    document.getElementById('results').innerHTML = '<p>No matching cards found</p>';
+  } else {
+    // Otherwise, display the cards
+    for (const card of cards) {
+      // Create the HTML for the card
+      const cardHTML = `
+        <div class="card">
+          <h2>${card.name}</h2>
+          <p>${card.description}</p>
+          <br>
+          <div class="tags">
+            ${card.tags.map(tag => `<span>${tag}</span>`).join('')}
+          </div>
+          <a href="${card.link}" target="_blank">View</a>
+        </div>
+      `;
+
+      // Append the card HTML to the results container
+      document.getElementById('results').innerHTML += cardHTML;
+    }
+  }
+}

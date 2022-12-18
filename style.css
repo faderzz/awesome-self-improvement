@@ -11,9 +11,11 @@ body {
   }
 
   .results {
-    display: inline-block; /* Make the container element behave like a table */
+    display: block; /* Make the container element behave like a table */
     width: 100%; /* Set full-width to expand the whole page */
     align-content: space-between;
+    margin-left: auto;
+    margin-left: auto;
 }
   
   h1 {
@@ -35,6 +37,8 @@ body {
     border: none;
     border-radius: 5px;
     margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
   }
   
   .card {

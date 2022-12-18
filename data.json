@@ -1,37 +1,44 @@
 [  
   { 
     "name": "Meal Prep Planning",    
-    "description": "Meal Prep Planning Site here...",    
-    "tags": ["Fitness", "Gym", "Health"]
+    "description": "Meal Prep Planning site to help manage your meals and plan your meals for the week.",   
+    "tags": ["Fitness", "Gym", "Health"],
+    "link": "https://www.google.com"
   },
   {
-    "name": "Another userful site",
-    "description": "Description of the useful site.",
-    "tags": ["Tag 4", "Tag 5", "Tag 6"]
+    "name": "Books to Read",
+    "description": "Books to read on your journey to self improvement. Includes books on productivity, health, fitness, etc.",
+    "tags": ["Books", "Support", "Education"],
+    "link": "https://www.google.com"
   },
   {
     "name": "Notion Templates",
-    "description": "Notion Templates which can help you organise yourself with meal plans, fitness, health, lifestyle, etc. https://notionpages.com/",
-    "tags": ["Lifestyle", "Organisation", "Planning"]
+    "description": "Notion Templates which can help you organise yourself with meal plans, fitness, health, lifestyle, etc.",
+    "tags": ["Lifestyle", "Organisation", "Planning"],
+    "link": "https://notionpages.com/"
   },
   {
     "name": "Card 4",
     "description": "Card 4 description",
-    "tags": ["Tag 10", "Tag 11", "Tag 12"]
+    "tags": ["Tag 10", "Tag 11", "Tag 12"],
+    "link": "https://www.google.com"
   },
   {
     "name": "Card 5",
     "description": "Card 5 description",
-    "tags": ["Tag 13", "Tag 14", "Tag 15"]
+    "tags": ["Tag 13", "Tag 14", "Tag 15"],
+    "link": "https://www.google.com"
   },
   {
     "name": "Card 6",
     "description": "Card 6 description",
-    "tags": ["Tag 13", "Tag 14", "Tag 15"]
+    "tags": ["Tag 13", "Tag 14", "Tag 15"],
+    "link": "https://www.google.com"
   },
   {
     "name": "Card 7",
     "description": "Card 7 description",
-    "tags": ["Tag 13", "Tag 14", "Tag 15"]
+    "tags": ["Tag 13", "Tag 14", "Tag 15"],
+    "link": "https://www.google.com"
   }
 ]
