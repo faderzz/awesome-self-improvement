@@ -10,8 +10,28 @@
     "tags": ["Tag 4", "Tag 5", "Tag 6"]
   },
   {
-    "name": "Card 2",
-    "description": "Card 2 description",
-    "tags": ["Tag 4", "Tag 5", "Tag 6"]
+    "name": "Notion Templates",
+    "description": "Notion Templates which can help you organise yourself with meal plans, fitness, health, lifestyle, etc. https://notionpages.com/",
+    "tags": ["Lifestyle", "Organisation", "Planning"]
+  },
+  {
+    "name": "Card 4",
+    "description": "Card 4 description",
+    "tags": ["Tag 10", "Tag 11", "Tag 12"]
+  },
+  {
+    "name": "Card 5",
+    "description": "Card 5 description",
+    "tags": ["Tag 13", "Tag 14", "Tag 15"]
+  },
+  {
+    "name": "Card 6",
+    "description": "Card 6 description",
+    "tags": ["Tag 13", "Tag 14", "Tag 15"]
+  },
+  {
+    "name": "Card 7",
+    "description": "Card 7 description",
+    "tags": ["Tag 13", "Tag 14", "Tag 15"]
   }
 ]

@@ -6,6 +6,8 @@ fetch('data.json')
     const searchInput = document.getElementById('search-input');
     const resultsContainer = document.getElementById('results');
 
+    
+
     // Add an event listener to the search input to trigger the search when the user submits the form
     searchInput.addEventListener('keyup', event => {
       // Get the search query from the input field
@@ -13,6 +15,12 @@ fetch('data.json')
 
       // Filter the data object to find any cards that match the query
       const matchingCards = data.filter(card => {
+        // if the query is null, return all cards
+        if (query === '' || query === null) {
+          return true;
+        }
+
+
         // Check if the name of the card, description, or any of the tags match the query
         return (
           card.name.toLowerCase().includes(query) ||
@@ -38,6 +46,7 @@ fetch('data.json')
               <div class="tags">
                 ${card.tags.map(tag => `<span>${tag}</span>`).join('')}
               </div>
+              <a href="${card.url}">View</a>
             </div>
           `;
 

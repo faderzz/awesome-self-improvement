@@ -9,6 +9,12 @@ body {
     padding: 20px;
     text-align: center;
   }
+
+  .results {
+    display: inline-block; /* Make the container element behave like a table */
+    width: 100%; /* Set full-width to expand the whole page */
+    align-content: space-between;
+}
   
   h1 {
     margin: 0;
@@ -32,7 +38,7 @@ body {
   }
   
   .card {
-    /* Round borders. Multiple cards in a row */
+    /* Make all cards the same size by leaving space */
     display: inline-block;
     box-sizing: border-box;
     width: 25%;
