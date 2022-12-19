@@ -1,8 +1,10 @@
 body {
     margin: 0;
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #131313;
     background-image: url("https://media.discordapp.net/attachments/1053706342537379952/1053976316556357662/wolfred_wallpaper1.png");
+    opacity: 0;
+    transition: opacity .5s;
   }
   
   header {
@@ -10,14 +12,6 @@ body {
     padding: 20px;
     text-align: center;
   }
-
-  .results {
-    display: block; /* Make the container element behave like a table */
-    width: 100%; /* Set full-width to expand the whole page */
-    align-content: space-between;
-    margin-left: auto;
-    margin-left: auto;
-}
   
   h1 {
     margin: 0;
@@ -28,8 +22,8 @@ body {
   }
   
   img {
-    display: block;
-    margin-left: 20px;
+    margin-left: 50%;
+    margin-right: 50%;
   }
 
   input[type="text"] {
@@ -43,54 +37,6 @@ body {
     border: none;
     border-radius: 5px;
     margin-bottom: 30px;
-  }
-  
-  #results {
-    /* Make the container element a grid container */
-    display: grid;
-    /* Set the number of columns in the grid to 4 */
-    grid-template-columns: repeat(4, 1fr);
-    /* Set full-width to expand the whole page */
-    width: 100%;
-    /* Center the grid horizontally */
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .card {
-    /* Add space inside the grid cell */
-    padding: 20px;
-    /* Round the corners of the grid cell */
-    border-radius: 5px;
-    /* Set the background color of the grid cell to white */
-    background-color: #fff;
-    /* Add space below the grid cell */
-    margin-bottom: 20px;
-    /* Add a shadow around the grid cell */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-  }
-  
-  .card h2 {
-    margin: 0;
-    font-size: 18px;
-  }
-  
-  .card p {
-    margin: 10px 0;
-    font-size: 14px;
-    color: #666;
-  }
-  
-  .card .tags {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 10px 0;
-    font-size: 14px;
-    color: #999;
-  }
-  
-  .card .tags span {
-    margin-right: 10px;
   }
   
   span {
@@ -114,3 +60,72 @@ body {
     margin: 0;
   }
   
+  nav {
+    max-width: 960px;
+    mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #000000 25%, #000000 75%, rgba(255, 255, 255, 0) 100%);
+    margin: 0 auto;
+    padding: 60px 0;
+  }
+  
+  nav ul {
+    text-align: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.2) 25%, rgba(0, 0, 0, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(139, 139, 139, 0.6);
+  }
+  
+  nav ul li {
+    display: inline-block;
+  }
+  
+  nav ul li a {
+    padding: 18px;
+    font-family: "Open Sans";
+    text-transform:uppercase;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  nav ul li a:hover {
+    color: red;
+    transition: ease-in-out 0.3s;
+  }
+
+  #main {
+    /* Make it a rounded card */
+    border-radius: 5px;
+    background-color: #0000007e;
+    padding: 20px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    /* Image Icon on the end of the card and fit it */
+    background-image: url("https://media.discordapp.net/attachments/1053706342537379952/1054061969835053136/wolf1.png?width=751&height=676");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 100px;
+  }
+
+  #main h1 {
+    /* Center the text */
+    color: #fff;
+  }
+
+  #main p {
+    /* Center the text */
+    color: #fff;
+  }
+
+  #main p a {
+    /* remove decorations */
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+
+  #main p a:hover {
+    /* remove decorations */
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: ease-in-out 0.1s;
+  }

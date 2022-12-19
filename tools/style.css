@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #131313;
+    background-image: url("https://media.discordapp.net/attachments/1053706342537379952/1053976316556357662/wolfred_wallpaper1.png");
+    opacity: 0;
+    transition: opacity .5s;
+  }
+  
+  header {
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .results {
+    display: block; /* Make the container element behave like a table */
+    width: 100%; /* Set full-width to expand the whole page */
+    align-content: space-between;
+    margin-left: auto;
+    margin-left: auto;
+}
+  
+  h1 {
+    margin: 0;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  img {
+    display: block;
+    margin-left: 20px;
+  }
+
+  input[type="text"] {
+    /* center input with padding */
+    display: block;
+    box-sizing: border-box;
+    width: 15%;
+    left: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 30px;
+  }
+  
+  #results {
+    /* Make the container element a grid container */
+    display: grid;
+    /* Set the number of columns in the grid to 4 */
+    grid-template-columns: repeat(4, 1fr);
+    /* Set full-width to expand the whole page */
+    width: 100%;
+    /* Center the grid horizontally */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .card {
+    /* Add space inside the grid cell */
+    padding: 20px;
+    /* Round the corners of the grid cell */
+    border-radius: 5px;
+    /* Set the background color of the grid cell to white */
+    background-color: #fff;
+    /* Add space below the grid cell */
+    margin-bottom: 20px;
+    /* Add a shadow around the grid cell */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card h2 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .card p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .card .tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    font-size: 14px;
+    color: #999;
+  }
+  
+  .card .tags span {
+    margin-right: 10px;
+  }
+  
+  span {
+/*     center text in a rounded border */
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #eee;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
