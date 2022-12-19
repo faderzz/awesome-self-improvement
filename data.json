@@ -18,6 +18,12 @@
     "link": "https://www.youtube.com/watch?v=M4K0s792wAU"
   },
   {
+    "name": "Meditation",
+    "description": "Meditation app to help you meditate. Free and easy to use.",
+    "tags": ["Mental Health", "Meditation", "Health"],
+    "link": "https://meditofoundation.org/medito-app"
+  },
+  {
     "name": "Books to Read",
     "description": "Find every e-book you want and need for self-improvement for free. Includes books on productivity, health, fitness, etc.",
     "tags": ["Books", "Support", "Education"],
