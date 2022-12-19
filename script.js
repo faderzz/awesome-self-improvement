@@ -58,3 +58,24 @@ function displayCards(cards) {
     }
   }
 }
+
+
+// sorting table
+$('#results').each(function(i) {
+  tw = 0;
+  $(this).children('.cards').each(function() {
+    tw += $(this).outerWidth(true);
+  });
+  $(this).attr('data-width', tw);
+});
+
+$(window).on('load resize', function() {
+  w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  $('#results').each(function(i) {
+    if ($(this).width() >= w) {
+      $(this).addClass('wrap');
+    } else if (w >= $(this).attr('data-width')) {
+      $(this).removeClass('wrap');    
+    }
+  });
+}).resize();

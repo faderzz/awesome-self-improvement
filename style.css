@@ -44,16 +44,28 @@ body {
     margin-bottom: 30px;
   }
   
+  #results {
+    /* Make the container element a grid container */
+    display: grid;
+    /* Set the number of columns in the grid to 4 */
+    grid-template-columns: repeat(4, 1fr);
+    /* Set full-width to expand the whole page */
+    width: 100%;
+    /* Center the grid horizontally */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
   .card {
-    /* Make all cards the same size by leaving space */
-    display: inline-block;
-    box-sizing: border-box;
-    width: 25%;
+    /* Add space inside the grid cell */
     padding: 20px;
+    /* Round the corners of the grid cell */
     border-radius: 5px;
+    /* Set the background color of the grid cell to white */
     background-color: #fff;
+    /* Add space below the grid cell */
     margin-bottom: 20px;
-    margin-right: 20px;
+    /* Add a shadow around the grid cell */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   }
   
