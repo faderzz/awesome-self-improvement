@@ -3,13 +3,19 @@
     "name": "Meal Prep Planning",    
     "description": "Meal Prep Planning site to help manage your meals and plan your meals for the week.",   
     "tags": ["Fitness", "Gym", "Health"],
-    "link": "https://www.google.com"
+    "link": "https://www.myfitnesspal.com/"
+  },
+  {
+    "name": "Free Courses - Mega.nz",
+    "description": "Please download the TXT and read the instructions on how to download the courses. This is for educational purposes only.",
+    "tags": ["Education", "Finance", "Others"],
+    "link": "https://0t.fyi/hdQNsV/direct"
   },
   {
     "name": "Books to Read",
-    "description": "Books to read on your journey to self improvement. Includes books on productivity, health, fitness, etc.",
+    "description": "Find every e-book you want and need for self-improvement for free. Includes books on productivity, health, fitness, etc.",
     "tags": ["Books", "Support", "Education"],
-    "link": "https://www.google.com"
+    "link": "http://libgen.is/"
   },
   {
     "name": "Notion Templates",
@@ -18,27 +24,33 @@
     "link": "https://notionpages.com/"
   },
   {
-    "name": "Card 4",
-    "description": "Card 4 description",
-    "tags": ["Tag 10", "Tag 11", "Tag 12"],
-    "link": "https://www.google.com"
+    "name": "Workout Tracking",
+    "description": "Track your workouts and progress and log your progress easily.",
+    "tags": ["Gym", "Health", "Organisation"],
+    "link": "https://www.strong.app/"
   },
   {
-    "name": "Card 5",
-    "description": "Card 5 description",
-    "tags": ["Tag 13", "Tag 14", "Tag 15"],
-    "link": "https://www.google.com"
+    "name": "Easy Peasy Method",
+    "description": "Quit your pornography addiction easily, easily.",
+    "tags": ["Health", "Mental Health", "Habits"],
+    "link": "https://easypeasymethod.org/"
   },
   {
-    "name": "Card 6",
-    "description": "Card 6 description",
-    "tags": ["Tag 13", "Tag 14", "Tag 15"],
-    "link": "https://www.google.com"
+    "name": "Simple to-do list",
+    "description": "Easily manage your daily goals with this simple to-do list.",
+    "tags": ["Organisation", "Habits", "Lifestyle"],
+    "link": "https://rchtect.github.io/Adonlist/"
   },
   {
-    "name": "Card 7",
-    "description": "Card 7 description",
-    "tags": ["Tag 13", "Tag 14", "Tag 15"],
-    "link": "https://www.google.com"
+    "name": "Manage your finances easily (FIRE)",
+    "description": "Easily manage your finances and savings with this guide. Contains a flowchart to help you manage your finances.",
+    "tags": ["Finance", "Organisation", "Lifestyle"],
+    "link": "https://www.reddit.com/r/financialindependence/comments/rwq9qw/i_made_a_new_and_improved_advanced/"
+  },
+  {
+    "name": "Retire with a lot of money (Fat FIRE)",
+    "description": "This is the same as FIRE but for those who want to retire with a larger amount of money. Read the pinned post to start your journey.",
+    "tags": ["Finance", "Organisation", "Lifestyle"],
+    "link": "https://www.reddit.com/r/fatFIRE/"
   }
 ]
