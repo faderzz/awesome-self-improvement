@@ -2,7 +2,8 @@ body {
     margin: 0;
     font-family: sans-serif;
     background-color: #131313;
-    background-image: url("https://media.discordapp.net/attachments/1053706342537379952/1053976316556357662/wolfred_wallpaper1.png");
+    background-image: url("https://cdn.discordapp.com/attachments/1052299307165941852/1094413300038643752/manuel-will-gd3t5Dtbwkw-unsplash.jpg");
+    background-size: cover;
   }
   
   header {
@@ -30,6 +31,8 @@ body {
   img {
     display: block;
     margin-left: 20px;
+    width: 10%;
+    height: auto;
   }
 
   input[type="text"] {
