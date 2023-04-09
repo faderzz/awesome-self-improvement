@@ -31,8 +31,8 @@ body {
   img {
     display: block;
     margin-left: 20px;
-    width: 10%;
-    height: auto;
+    height: 160px;
+    width: auto;
   }
 
   input[type="text"] {
